@@ -3,13 +3,13 @@ import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
-class moveCursor {
+class MoveCursor {
 
     final static int default_time_interval = 60000;
 
     public static void main(String args[]) throws Exception {
         /*Computing time interval*/
-        final int time_interval = moveCursor.getDefault(args);
+        final int time_interval = MoveCursor.getDefault(args);
 
         Timer timer = new Timer("mouse");
         timer.schedule(new TimerTask() {
@@ -49,13 +49,13 @@ class moveCursor {
             if(checkNegTime<0)
             {
                 System.err.println("Invalid param. Negative time:" + checkNegTime);
-                System.err.println("Using default time interval:" + moveCursor.default_time_interval);
-                checkNegTime=moveCursor.default_time_interval;
+                System.err.println("Using default time interval:" + MoveCursor.default_time_interval);
+                checkNegTime=MoveCursor.default_time_interval;
             }
             return checkNegTime;
         } catch (Exception e) {
-            System.err.println("Invalid param. Using default time interval:" + moveCursor.default_time_interval);
-            return (moveCursor.default_time_interval);
+            System.err.println("Invalid param. Using default time interval:" + MoveCursor.default_time_interval);
+            return (MoveCursor.default_time_interval);
         }
     }
 }
