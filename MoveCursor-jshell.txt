@@ -1,0 +1,11 @@
+import java.awt.Robot;
+Robot cursor = new Robot();
+int time_interval=6000//change if you need
+cursor.setAutoDelay(time_interval);
+while(true)
+{
+	cursor.mouseMove(300, 300);//0,0
+        cursor.mouseMove(500, 300);//1,0
+        cursor.mouseMove(500, 500);//1,1                    
+        cursor.mouseMove(300, 500);//0,1
+}
